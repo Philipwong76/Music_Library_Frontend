@@ -6,7 +6,7 @@ const MusicDisplay = (props) => {
         <div>
             {props.musicPost.map((song) => {
                 return (
-                    <div>
+                    <div className="feed">
                         <div>Title<td>{song.title}</td></div>
                         <div>Album<td>{song.album}</td></div>
                         <div>Artist<td>{song.artist}</td></div>
