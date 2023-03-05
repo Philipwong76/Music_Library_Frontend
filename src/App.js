@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import CreateSong from './components/Createsong/CreateSong';
+import MusicDisplay from './components/MusicDisplay/MusicDisplay';
 
 
 function App() {
@@ -18,16 +19,22 @@ function App() {
     setSongs(response.data)
   }
 
-  async function addNewSongs(songs){
+  async function addNewSongs(){
     const addSongs = await axios.post('http://127.0.0.1:8000/api/music/')
     setSongs(addSongs.data);
   }
 
   return (
-    <div>
-      <h1>MUSIC LIBRARY</h1>
-      <div>
+    <div className='background'>
+      <h1 className='Music'>MUSIC LIBRARY</h1>
+      <div className='submit'>
         <CreateSong addNewSongProperty={addNewSongs}/>
+      </div>
+      <div className='feeds'>
+        <MusicDisplay musicPost={songs}/>
+      </div>
+      <div>
+        
       </div>
     </div>
   );

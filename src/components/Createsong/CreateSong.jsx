@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './Createsong.css';
 
 const CreateSong = (props) => {
 
@@ -24,6 +25,7 @@ const CreateSong = (props) => {
 
     return ( 
         <form onSubmit={onSubmit} className="Createform">
+            <h3 className="song">Create song</h3>
             <div className="PaddingFunction">
                 <label className="Name">Title</label>
                 <input type='text' value={title} onChange={(event) => setTitle(event.target.value)} className='Nametext'/>
