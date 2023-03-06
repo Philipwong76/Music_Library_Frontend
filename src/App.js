@@ -19,22 +19,20 @@ function App() {
     setSongs(response.data)
   }
 
-  async function addNewSongs(){
-    const addSongs = await axios.post('http://127.0.0.1:8000/api/music/')
+  async function addNewSongs(postSong){
+    const addSongs = await axios.post('http://127.0.0.1:8000/api/music/', postSong)
     setSongs(addSongs.data);
   }
 
   return (
     <div className='background'>
       <h1 className='Music'>MUSIC LIBRARY</h1>
+      <h2 className='songtitle'>Song Display</h2>
       <div className='submit'>
         <CreateSong addNewSongProperty={addNewSongs}/>
       </div>
       <div className='feeds'>
         <MusicDisplay musicPost={songs}/>
-      </div>
-      <div>
-        
       </div>
     </div>
   );
