@@ -1,16 +1,15 @@
 .background {
     background-color: burlywood;
 }
- .submit {
-   padding-top: 11%;
-   padding-right: 76%;
- }
 
- .feeds {
-   margin: 0%;
-    position: relative;
-    padding-left: 50px;
-    bottom: 450px;
+.search {
+   padding-right: 945px;
+   padding-top: 50px;
+}
+
+ .submit {
+   padding-top: 20px;
+   padding-right: 76%;
  }
 
 .Music {
@@ -19,10 +18,15 @@
    padding-left: 50px;
 }
 
+.feeds {
+   margin: 0%;
+   padding-left: 80px;
+   bottom: 530px;
+ }
+
 .songtitle {
    font-family: sans-serif;
    color: black;
    padding-top: 50px;
-   padding-left: 280px;
+   padding-left: 235px;
 }
-
