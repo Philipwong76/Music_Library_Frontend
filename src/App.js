@@ -38,14 +38,10 @@ function App() {
   return (
     <div className='background'>
       <h1 className='Music'>MUSIC LIBRARY</h1>
-      <div className='search'>
-        <SearchBar filterSearchSongs={getSearchSongs}/>
-      </div>
-      <div className='submit'>
-        <CreateSong addNewSongProperty={addNewSongs}/>
-      </div>
+      <div className='search'><SearchBar filterSearchSongs={getSearchSongs}/></div>
+      <div className='submit'><CreateSong addNewSongProperty={addNewSongs}/></div>
       <div className='feeds'>
-      <h2 className='songtitle'>Song Display</h2>
+        <h2 className='songtitle'>Song Display</h2>
         <MusicDisplay musicPost={songs}/>
       </div>
     </div>
